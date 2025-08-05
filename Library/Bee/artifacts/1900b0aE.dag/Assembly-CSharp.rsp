@@ -354,6 +354,8 @@
 "Assets/LayerMask6.cs"
 "Assets/LayerMask7.cs"
 "Assets/LayerMask8.cs"
+"Assets/PlayerCam.cs"
+"Assets/PlayerInput.cs"
 "Assets/projectile.cs"
 -langversion:9.0
 /deterministic

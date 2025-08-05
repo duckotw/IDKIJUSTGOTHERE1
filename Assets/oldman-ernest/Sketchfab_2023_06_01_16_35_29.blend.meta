@@ -3,7 +3,27 @@ guid: 0a2e481ccbad3104ca0c18bf0f751de7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ErnestClothes
+    second: {fileID: 2100000, guid: d60044c802ca8d946907fd69129bf582, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OldManHatEtc
+    second: {fileID: 2100000, guid: e6c790ac8da82a04095c1995f39c2515, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: high-poly.001
+    second: {fileID: 2100000, guid: adbebdffa4ced69458dc8fe08dcf96fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: male_generic
+    second: {fileID: 2100000, guid: 81440106df2c6874fa69f3e1c3f41ed8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

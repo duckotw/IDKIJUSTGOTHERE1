@@ -9,20 +9,21 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
 
     public LayerMask whatIsGround, whatIsPlayer;
-    public float health;
+    public float health = 100f;
 
     //Patrolling
     public Vector3 walkPoint;
     bool walkPointSet;
-    public float walkPointRange;
+    public float walkPointRange = 5f;
 
     //Attacking
-    public float timeBetweenAttacks;
+    public float timeBetweenAttacks = .5f;
     bool alreadyAttacked;
-    public GameObject projectile;
+    public GameObject projectile2;
 
     //States
-    public float sightRange, attackRange;
+    public float sightRange = 10f;
+    public float attackRange = 1f;
     public bool playerInSightRange, playerInAttackRange;
 
     private void Awake()
@@ -83,9 +84,8 @@ public class EnemyAI : MonoBehaviour
         if(!alreadyAttacked)
         {
             //Attack code
-            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            agent.SetDestination(player.position);
+            Rigidbody rb = Instantiate(projectile2, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //
 
             alreadyAttacked = true;
