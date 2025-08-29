@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks = .5f;
     bool alreadyAttacked;
-    public GameObject projectile2;
+    public GameObject arrow2;
 
     //States
     public float sightRange = 10f;
@@ -84,7 +84,7 @@ public class EnemyAI : MonoBehaviour
         if(!alreadyAttacked)
         {
             //Attack code
-            Rigidbody rb = Instantiate(projectile2, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            Rigidbody rb = Instantiate(arrow2, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             //
 
@@ -98,16 +98,18 @@ public class EnemyAI : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
+        //Debug.Log("Hello3");
         health -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        if (health <= 0) 
+            Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
     private void DestroyEnemy()
     {
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 
     private void OnDrawGizmosSelected()

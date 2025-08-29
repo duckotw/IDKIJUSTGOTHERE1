@@ -20,7 +20,7 @@ public class LayerMask6 : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out raycastHit, Mathf.Infinity, layerMask))
         {
-            Debug.Log("Ray hit " + raycastHit.transform.gameObject.layer);
+            //Debug.Log("Ray hit " + raycastHit.transform.gameObject.layer);
         }
     }
 }

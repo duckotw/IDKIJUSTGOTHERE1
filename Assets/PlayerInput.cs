@@ -28,7 +28,7 @@ public class PlayerInput : MonoBehaviour
    
     public Vector3 moveDirection;
     private Rigidbody rb;
-    public GameObject projectile1;
+    public GameObject arrow1;
 
     private void Start()
     {
@@ -115,7 +115,7 @@ public class PlayerInput : MonoBehaviour
             targetPoint = ray.GetPoint(75); //just a point far away from player
         //targetPoint - attackPoint
         Vector3 directionWOSp = targetPoint - transform.position;
-        Rigidbody rb = Instantiate(projectile1, orientation.position, Quaternion.identity).GetComponent<Rigidbody>();
-        rb.AddForce(directionWOSp.normalized * 32f, ForceMode.Impulse);
+        arrow1 = Instantiate(arrow1, orientation.position, Quaternion.identity);
+        arrow1.GetComponent<Rigidbody>().AddForce(directionWOSp.normalized * 32f, ForceMode.Impulse);
     }
 }
